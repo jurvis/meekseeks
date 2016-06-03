@@ -50,7 +50,7 @@ type FuncMap map[string]ResponseFunc
 type ResponseFunc func(m *message)
 
 // InitMeeseek initialises a Meeseek
-func InitMeeseek(configJSON []byte, lg *log.Logger) *Meeseeks {
+func InitMeeseek(lg *log.Logger) *Meeseeks {
 	if lg == nil {
 		lg = log.New(os.Stdout, "[meeseeks]", 0)
 	}
