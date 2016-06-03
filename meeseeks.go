@@ -1,7 +1,6 @@
 package meeseeks
 
 import (
-	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -56,27 +55,12 @@ func InitMeeseek(configJSON []byte, lg *log.Logger) *Meeseeks {
 		lg = log.New(os.Stdout, "[meeseeks]", 0)
 	}
 
-	var cfg config
-	err := json.Unmarshal(configJSON, &cfg)
-	if err != nil {
-		lg.Fatalf("cannot unmarshal config json %s", err)
-	}
-
-	if cfg.TelegramAPIKey == "" {
-		log.Fatalf("config.json exists but doesn't contain a Telegram API Key")
-	}
-
-	botName := cfg.Name
-	if botName == "" {
-		log.Fatalf("config.json exists but doesn't contain a bot name. Set your botname when registering with The Botfather.")
-	}
-
-	bot, err := telebot.NewBot(cfg.TelegramAPIKey)
+	bot, err := telebot.NewBot(os.Getenv("TELEGRAM_API_KEY"))
 	if err != nil {
 		log.Fatalf("error creating a new bot :/ %s", err)
 	}
 
-	m := &Meeseeks{Name: botName, bot: bot, log: lg}
+	m := &Meeseeks{Name: os.Getenv("TELEGRAM_BOT_NAME"), bot: bot, log: lg}
 
 	m.fmap = m.getDefaultFuncMap()
 
