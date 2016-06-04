@@ -19,6 +19,7 @@ func (m *Meeseeks) Start(msg *message) {
     /Hello - say Hello to the bot
     /Clear - clears out your NSFW crap
     /urbandict - does an Urban Dictionary search
+    /euro - get information on the European Cup
 
     Give these commands a try!`, nil)
 }
@@ -30,5 +31,7 @@ func (m *Meeseeks) Help(msg *message) {
     /Hello - say Hello to the bot
     /Clear - clears out your NSFW crap
     /urbandict - does an Urban Dictionary search
+    /euro - get information on the European Cup
+
   `, nil)
 }
