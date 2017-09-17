@@ -19,6 +19,8 @@ func (m *Meeseeks) Start(msg *message) {
     /Hello - say Hello to the bot
     /Clear - clears out your NSFW crap
     /urbandict - does an Urban Dictionary search
+    /tall - list BTCUSD prices for select exchanges
+    /ticker - get price of specific trading pairs in specific exchanges
 
     Give these commands a try!`, nil)
 }
@@ -30,6 +32,8 @@ func (m *Meeseeks) Help(msg *message) {
     /Hello - say Hello to the bot
     /Clear - clears out your NSFW crap
     /urbandict - does an Urban Dictionary search
+    /tall - list BTCUSD prices for select exchanges
+    /ticker - get price of specific trading pairs in specific exchanges
 
   `, nil)
 }
