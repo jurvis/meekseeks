@@ -80,7 +80,8 @@ func (m *Meeseeks) getDefaultFuncMap() FuncMap {
 		"/clear":     m.Clear,
 		"/urbandict": m.UrbanDictSearch,
 		"/ud":        m.UrbanDictSearch,
-		"/euro":      m.EuroFixturesSearch,
+		"/ticker":    m.Ticker,
+		"/tall":      m.Tall,
 	}
 }
 
