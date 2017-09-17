@@ -51,7 +51,7 @@ var exchangeCodes = map[string]string {
 	"bitstamp": "Bitstamp",
 	"kraken": "Kraken",
 	"btce": "BTC-E",
-	"cryptsy": "Cryptsy",
+	"coinbase": "Coinbase",
 	"okcoin": "OKCoin",
 	"gemini": "Gemini",
 }
