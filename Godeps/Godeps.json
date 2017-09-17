@@ -1,15 +1,11 @@
 {
 	"ImportPath": "github.com/jurvis/meeseeks",
-	"GoVersion": "go1.6",
-	"GodepVersion": "v74",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
 	"Packages": [
 		"./..."
 	],
 	"Deps": [
-		{
-			"ImportPath": "github.com/kardianos/osext",
-			"Rev": "29ae4ffbc9a6fe9fb2bc5029050ce6996ea1d3bc"
-		},
 		{
 			"ImportPath": "github.com/tucnak/telebot",
 			"Comment": "v1.0-44-g68ad7fd",
