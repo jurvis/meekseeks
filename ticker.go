@@ -31,7 +31,7 @@ type MarketSummaryResponse struct {
 func (m *Meeseeks) Ticker(msg *message) {
 	if len(msg.Args) == 0 {
 		so := &telebot.SendOptions{ReplyTo: *msg.Message, ReplyMarkup: telebot.ReplyMarkup{ForceReply: true, Selective: true}}
-		m.SendMessage(msg.Chat, "/ticker: Do a crypto exchange rate converstion\nHere are some commands to try: \n* btcusd \n* btcusd --market coinbase", so)
+		m.SendMessage(msg.Chat, "/ticker: Do a crypto exchange rate converstion\nHere are some commands to try: \n* btcusd \n* btcusd -market coinbase", so)
 	}
 
 	pair, market := parseArgs(msg.Args)
@@ -83,7 +83,7 @@ func parseArgs(args []string) (pair string, market string) {
 	for i, a := range args {
 		pair = args[0]
 
-		if (a == "--market") {
+		if (a == "-market") {
 			market = args[i + 1]
 		}
 	}
